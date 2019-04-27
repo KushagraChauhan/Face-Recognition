@@ -1,6 +1,6 @@
 This Repo has two parts-
-# 1. Through Webcam including training and testing of the model using Keras and TensorFlow.
-# 2. From the images, using Face_Recognition Library 
+## 1. Through Webcam including training and testing of the model using Keras and TensorFlow.
+## 2. From the images, using Face_Recognition Library 
 
 ## Requirements
 Run the command-
