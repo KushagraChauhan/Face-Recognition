@@ -1,13 +1,17 @@
 ## Requirements
 Run the command-
-	pip install -r requirements.txt
+
+		pip install -r requirements.txt
+
 To install all the dependencies.
 
 
 ### Add New Faces
 
 Run the command-
-	python save_face.py
+
+		python save_face.py
+
 to add a new face which will be stored in a new folder- new_faces
 Enter the id as 1 
 After that it will ask the initial value, enter it as 1(if you are entering for the first time), otherwise as 301.
@@ -16,6 +20,7 @@ Webcam will take your 300 photos, or you can also add own photos in the new_face
 ### Running the csv file
 
 Run the command-
+
 		python store_facial_features.py 
 
 What this file does is it iteratively searches for every face in the faces folder, then computes the embeddings of each of them.
