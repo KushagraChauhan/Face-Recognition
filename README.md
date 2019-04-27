@@ -1,19 +1,23 @@
+This Repo has two parts-
+# 1. Through Webcam including training and testing of the model using Keras and TensorFlow.
+# 2. From the images, using Face_Recognition Library 
+
 ## Requirements
 Run the command-
 
 		pip install -r requirements.txt
 
 To install all the dependencies.
+For installing Dlib library refer to-   https://github.com/davisking/dlib.git
 
-
+# `Part 1`
 ### Add New Faces
 
 Run the command-
 
-	   	python save_face.py
-		
-to add a new face which will be stored in a new folder- new_faces
-Enter the id as 1 
+		python save_face.py
+to add a new face which will be stored in a new folder- new_faces.
+Enter the id as 1.
 After that it will ask the initial value, enter it as 1(if you are entering for the first time), otherwise as 301.
 Webcam will take your 300 photos, or you can also add own photos in the new_faces folder. 
 
@@ -50,5 +54,46 @@ Take Atleast 4 different faces for best result.
 Make sure to run the train_model_keras.py file first.
 		
 		python recognize.py
+
+# `Part 2`
+
+To install the Face_recognition library run-
+
+        pip install face_recognition
+or refer to https://github.com/ageitgey/face_recognition.git
+
+### Structure  
+from_image/
+- fr.py 
+- ak.jpg
+- images/
+        -akshay.jpg
+        -donald.jpg
+        -manmohan.jpg
+        -rahul.jpg
+
+### How to run-
+Run the file fr.py as-
+
+        python fr.py
+
+where 'ak.jpg' is the image being checked.
+
+It will produce output as- 
+
+        Not matched: rahul.jpeg
+        Matched: akshay.jpg
+        Not matched: donald.jpeg
+        Not matched: manmohan.jpg
+
+### What is being done-
+Looping over each image.
+Encoding the image into a feature vector.
+Comparing the loaded image with the image to be recognized.
+If it is a match, we print that. If it is a mismatch, we print that as well.
+
+
+
+    
 
 
