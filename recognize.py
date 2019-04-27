@@ -6,11 +6,11 @@ from imutils import face_utils
 from keras.models import load_model
 
 detector = dlib.get_frontal_face_detector()
-FACENET_MODEL = "/models/dlib_face_recognition_resnet_model_v1.dat"
-SHAPE_PREDICTOR = "/models/shape_predictor_68_face_landmarks.dat"
+FACENET_MODEL = "models/dlib_face_recognition_resnet_model_v1.dat"
+SHAPE_PREDICTOR = "models/shape_predictor_68_face_landmarks.dat"
 face_rec = dlib.face_recognition_model_v1(FACENET_MODEL)
 shape_predictor = dlib.shape_predictor(SHAPE_PREDICTOR)
-face_recognizer = load_model('/models/mlp_model_keras2.h5')
+face_recognizer = load_model('models/mlp_model_keras2.h5')
 
 def recognize_face(face_descriptor):
 	#print(face_descriptor)
@@ -22,7 +22,7 @@ def recognize_face(face_descriptor):
 def get_face_names():
 	face_ids = dict()
 	import sqlite3
-	conn = sqlite3.connect("/database/face_db.db")
+	conn = sqlite3.connect("database/face_db.db")
 	sql_cmd = "SELECT * FROM faces"
 	cursor = conn.execute(sql_cmd)
 	for row in cursor:
